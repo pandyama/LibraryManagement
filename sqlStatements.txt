@@ -1,0 +1,10 @@
+CREATE TABLE Book(bookID INT NOT NULL AUTO_INCREMENT,
+bookTitle VARCHAR(30) NOT NULL,
+bookAuthor VARCHAR(20) NOT NULL,
+bookGenre VARCHAR(20) NOT NULL,
+bookPublisher VARCHAR(20) NOT NULL,
+publishYear INT NOT NULL,
+borrowed BOOLEAN,
+PRIMARY KEY(bookID));
+
+mproot
