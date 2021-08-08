@@ -8,6 +8,6 @@ Simple Java Library Management with MariaDB
   - Objects (Contains object definitions for Person & Book)
 
 
-![1](https://github.com/pandyama/LibraryManagement/blob/master/s1.JPEG)
+![1](https://github.com/pandyama/LibraryManagement/blob/master/s1.JPG)
 
-![1](https://github.com/pandyama/LibraryManagement/blob/master/s2.JPEG)
+![1](https://github.com/pandyama/LibraryManagement/blob/master/s2.JPG)
