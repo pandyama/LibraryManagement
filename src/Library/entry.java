@@ -24,11 +24,14 @@ public class entry {
         else if(selected == 2){
             NewBook b1 = new NewBook();
             b1.getNewBookDetails(1);
+
         }
         else{
             BookDaoImpl b2 = new BookDaoImpl();
             b2.getBooks();
-
+            System.out.print("Please select a book by ID: ");
+            int id = myObj.nextInt();
+            b2.borrowBook(id);
         }
     }
 }

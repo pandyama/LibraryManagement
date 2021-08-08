@@ -3,11 +3,7 @@ package Library.DatabaseHelper;
 import Library.Constants;
 import Library.Objects.Book;
 import Library.DAO.BookDao;
-import java.io.File;
-import java.io.FileNotFoundException;
-
 import java.sql.*;
-import java.util.Scanner;
 
 public class BookDaoImpl implements BookDao {
     Constants c = new Constants();
@@ -58,12 +54,25 @@ public class BookDaoImpl implements BookDao {
             ResultSet rs;
             rs = s1.executeQuery(getBooks);
             while(rs.next()){
+                System.out.print(rs.getInt("bookID")+" - ");
                 System.out.print(rs.getString("bookTitle")+" - ");
                 System.out.print(rs.getString("bookAuthor")+" - ");
                 System.out.print(rs.getString("bookGenre")+" ");
                 System.out.println("");
             }
 
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    }
+
+    public void borrowBook(int id){
+        try{
+            Connection c1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/Library?user=root&password="+c.maria);
+            String borrowBook = "UPDATE Book SET borrowed=1 WHERE bookID = "+id+";";
+            PreparedStatement preparedStmt2 = c1.prepareStatement(borrowBook);
+            preparedStmt2.execute();
         }
         catch(Exception e){
             System.out.println(e);

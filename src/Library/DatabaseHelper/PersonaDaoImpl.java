@@ -2,7 +2,6 @@ package Library.DatabaseHelper;
 
 import Library.DAO.PersonDao;
 import Library.Objects.Person;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
