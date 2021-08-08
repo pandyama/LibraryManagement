@@ -1,16 +1,19 @@
 package Library.DatabaseHelper;
 
+import Library.Constants;
 import Library.DAO.PersonDao;
 import Library.Objects.Person;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class PersonaDaoImpl implements PersonDao {
+public class PersonDaoImpl implements PersonDao {
+    Constants c = new Constants();
+
     @Override
     public void addPerson(Person p1) {
         try{
-            Connection c1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/Library?user=root&password=mproot");
+            Connection c1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/Library?user=root&password="+c.maria);
             String createPerson = "CREATE TABLE IF NOT EXISTS Person(" +
                     "personID INT NOT NULL AUTO_INCREMENT," +
                     "firstName VARCHAR(30) NOT NULL," +

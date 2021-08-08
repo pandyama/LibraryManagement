@@ -1,6 +1,6 @@
 package Library.Helper;
 
-import Library.DatabaseHelper.PersonaDaoImpl;
+import Library.DatabaseHelper.PersonDaoImpl;
 import Library.Objects.Person;
 
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class NewPerson {
 
     public String getNewPersonDetails(int num){
-        PersonaDaoImpl p1 = new PersonaDaoImpl();
+        PersonDaoImpl p1 = new PersonDaoImpl();
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         String fn,ln,pw,ph,addr;
         int ptype;
